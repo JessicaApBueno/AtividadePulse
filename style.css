@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #011C40;
+    color: #2CB1BF;
+    text-align: center;
+    font-size: large;
+    font-family: "Roboto Mono", monospace;
+}
+.main-title::after{
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+.pulse {
+   
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(200%);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    100% {
+      transform: scale(1.1);
+      filter: brightness(200%);
+    }
+  }
+
+  footer{
+    font-family:"Roboto Mono", monospace;
+    height: 50px;
+    background-color: #011126;
+    color: #2CB1BF;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #2CB1BF;
+
+  }
+
+  .Descodificadas:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
